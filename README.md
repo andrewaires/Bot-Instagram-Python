@@ -31,6 +31,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 Se você usa outro navegador, recomendo que use este repositório e procure o nome do seu navegador para instalar corretamente o Webdriver:
 https://github.com/SergeyPirogov/webdriver_manager#install-manager
 
+
 ## Instruções para mudar o perfil e comentário
 1. Na linha 54 do arquivo main você pode editar o perfil que deseja acessar, basta trocar o link:
 ```python
@@ -42,3 +43,5 @@ bot.comentar('comentário teste')
 ```
 
 
+### Prévia:
+https://user-images.githubusercontent.com/121694498/226150779-bae942a5-f6c1-4d57-b3bc-4af47cf8a103.mp4
