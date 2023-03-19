@@ -5,6 +5,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 import time
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
 
 class bot_instagram:
     def __init__(self):
@@ -25,6 +26,11 @@ class bot_instagram:
                 lista.append(href)
         return lista
 
+    # Like nas fotos 
+    def curtida(self, url):
+        like = self.driver.find_elements(by=By.CLASS_NAME, value='_abl-')
+        like[1].click()
+    
     # Comenta nas fotos
     def comentar(self, comentario):
         textarea = self.driver.find_element(by='css selector', value='textarea[aria-label="Adicione um comentário..."]')
@@ -53,7 +59,9 @@ for foto in fotos:
     bot.entrar(foto)
     bot.driver.execute_script('return document.readyState')
     time.sleep(4)
-    
+    # Curti a foto
+    bot.curtida(foto)
+    time.sleep(2)
     # Comenta nas fotas
     bot.comentar('comentário teste')
     time.sleep(2)
